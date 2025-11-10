@@ -1,61 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- SEO & META -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BioBloom Club - Organic Cannabis Bloom Tips (2025)</title>
-  <meta name="description" content="Daily bloom phase tips: pH, LEDs, harvest timing. Free Discord + affiliate gear. Updated Nov 2025." />
+  <title>BioBloom Club – AI-Powered Cannabis Bloom Tips</title>
+  <meta name="description" content="Daily AI bloom tips, pH, LEDs, harvest. Free Discord + affiliate gear. Updated Nov 2025." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://biobloom.club" />
-  <meta property="og:title" content="BioBloom Club - Bloom Mastery" />
+  <meta property="og:title" content="BioBloom Club – Bloom Phase Mastery" />
   <meta property="og:description" content="AI-powered bloom tips. Free community. Affiliate gear." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://biobloom.club" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- FAVICON -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>leaf</text></svg>">
+
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- GA4 TRACKING -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <!-- STYLES -->
   <style>
-    :root { --green: #00ff88; --dark: #0a0a0a; --card: #1a1a1a; }
-    *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
-    body { font-family:'Inter',sans-serif; background:var(--dark); color:#e0e0e0; line-height:1.7; min-height:100vh; display:flex; flex-direction:column; }
-    header, footer { background:#111; text-align:center; padding:1.5rem 1rem; }
-    h1 { font-family:'Orbitron',sans-serif; color:var(--green); font-size:2.5rem; }
-    .hero { background:linear-gradient(135deg,var(--green),#00b85a); color:#000; text-align:center; padding:3rem 1rem; }
-    .content { flex:1; max-width:800px; margin:2rem auto; padding:0 1rem; }
-    .tip { background:var(--card); padding:2rem; border-radius:12px; border-left:5px solid var(--green); margin-bottom:2rem; }
-    .tip h3 { color:var(--green); }
-    .affiliates { display:flex; flex-wrap:wrap; justify-content:center; gap:1rem; margin:2rem 0; }
-    .affiliates a { background:#222; color:var(--green); padding:0.8rem 1.4rem; border-radius:8px; text-decoration:none; font-weight:600; }
-    .affiliates a:hover { background:var(--green); color:#000; }
-    footer a { color:var(--green); margin:0 0.5rem; }
-    @media (max-width:600px) { h1 { font-size:2rem; } }
+    :root {
+      --green: #00ff88;
+      --dark: #0a0a0a;
+      --card: #111;
+      --text: #e0e0e0;
+      --light: #888;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--dark);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* HEADER */
+    header {
+      padding: 2rem 0;
+      text-align: center;
+    }
+    .logo { font-size: 2.2rem; font-weight: 700; color: var(--green); }
+    .tagline { font-size: 1.1rem; color: var(--light); margin-top: 0.5rem; }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #00b85a, var(--green));
+      color: #000;
+      text-align: center;
+      padding: 5rem 1rem;
+      border-radius: 16px;
+      margin: 2rem 0;
+    }
+    .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.3rem; max-width: 700px; margin: 0 auto 1.5rem; }
+    .cta {
+      background: #000;
+      color: var(--green);
+      border: none;
+      padding: 0.9rem 2rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .cta:hover { background: var(--green); color: #000; }
+
+    /* FEATURES */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin: 4rem 0;
+    }
+    .feature {
+      background: var(--card);
+      padding: 2rem;
+      border-radius: 12px;
+      border-left: 4px solid var(--green);
+    }
+    .feature h3 { color: var(--green); margin-bottom: 0.8rem; font-size: 1.3rem; }
+    .feature p { color: var(--light); font-size: 0.95rem; }
+
+    /* TESTIMONIALS */
+    .testimonials {
+      background: #000;
+      padding: 4rem 1rem;
+      text-align: center;
+      margin: 4rem 0;
+      border-radius: 16px;
+    }
+    .testimonials h2 { color: var(--green); margin-bottom: 2rem; }
+    .quotes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .quote {
+      background: #111;
+      padding: 1.5rem;
+      border-radius: 12px;
+      max-width: 300px;
+      font-style: italic;
+      color: var(--light);
+    }
+    .quote-author { margin-top: 1rem; font-weight: 600; color: var(--green); font-style: normal; }
+
+    /* AFFILIATES */
+    .affiliates {
+      text-align: center;
+      margin: 4rem 0;
+    }
+    .affiliates a {
+      background: #222;
+      color: var(--green);
+      padding: 0.8rem 1.6rem;
+      margin: 0.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: 0.3s;
+    }
+    .affiliates a:hover { background: var(--green); color: #000; }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--light);
+      font-size: 0.9rem;
+    }
+    footer a { color: var(--green); text-decoration: none; }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+      .hero p { font-size: 1.1rem; }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>BioBloom Club</h1>
-    <p>Organic Cannabis Bloom Phase Tips</p>
-  </header>
-  <section class="hero">
-    <h2>Daily Bloom Tip</h2>
-    <p>Maximize yield in 8 weeks. Free. No signup.</p>
-  </section>
-  <main class="content">
-    <div class="tip">
-      <h3>pH 6.0–6.5 = Max Nutrient Uptake</h3>
-      <p>Lockout kills buds. Test daily with <a href="https://amzn.to/BluelabPen" target="_blank" rel="nofollow">Bluelab pH Pen</a>.</p>
-      <p><strong>Affiliate:</strong> <a href="https://www.seedsman.com/en/affiliate-information?a_aid=biobloom" target="_blank" rel="nofollow">Seedsman</a></p>
-    </div>
-  </main>
-  <section class="affiliates">
-    <a href="https://www.seedsman.com/en/affiliate-information?a_aid=biobloom" target="_blank" rel="nofollow">Seedsman</a>
-    <a href="https://ilgm.com/affiliate-program?aff=biobloom" target="_blank" rel="nofollow">ILGM</a>
-    <a href="https://www.mars-hydro.com/affiliate-program?ref=biobloom" target="_blank" rel="nofollow">Mars Hydro</a>
-    <a href="https://discord.gg/biobloom" target="_blank">Discord</a>
-  </section>
-  <footer>
-    <p><a href="/">Home</a> | <a href="https://discord.gg/biobloom">Discord</a> | <a href="https://x.com/biobloomclub">X</a></p>
-    <p>&copy; 2025 BioBloom.Club</p>
-  </footer>
+
+  <div class="container">
+
+    <!-- HEADER -->
+    <header>
+      <div class="logo">BioBloom.Club</div>
+      <div class="tagline">AI-Powered Cannabis Bloom Phase Mastery</div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1>Daily AI Bloom Tips</h1>
+      <p>Get science-backed pH, light, and harvest hacks every 24 hours. Free. No signup.</p>
+      <button class="cta" onclick="gtag('event', 'cta_click', {'action': 'join_discord'}); window.open('https://discord.gg/PbkEQQB8', '_blank')">
+        Join Discord Club
+      </button>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features">
+      <div class="feature">
+        <h3>AI-Powered Tips</h3>
+        <p>Daily pH, nutrient, and LED advice tailored to bloom phase. No fluff.</p>
+      </div>
+      <div class="feature">
+        <h3>Free Grow Journal</h3>
+        <p>Track your grow. Share progress. Get feedback from 100+ growers.</p>
+      </div>
+      <div class="feature">
+        <h3>Affiliate Gear</h3>
+        <p>Seedsman, ILGM, Mars Hydro — all tested. Earnings fund free content.</p>
+      </div>
+      <div class="feature">
+        <h3>Zero Cost</h3>
+        <p>No ads. No paywall. Just pure bloom science.</p>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+      <h2>Growers Love BioBloom</h2>
+      <div class="quotes">
+        <div class="quote">
+          “Fixed my pH lockout in 2 days. Yield up 30%.”
+          <div class="quote-author">— @cannagrowerNL</div>
+        </div>
+        <div class="quote">
+          “Best bloom community on Discord. Daily tips = gold.”
+          <div class="quote-author">— @microgrower420</div>
+        </div>
+        <div class="quote">
+          “Seedsman link worked. Got 20% off. Thanks BioBloom!”
+          <div class="quote-author">— @autoflowerfan</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AFFILIATES -->
+    <section class="affiliates">
+      <a href="https://www.seedsman.com/en/affiliate-information?a_aid=biobloom&utm_source=biobloom&utm_medium=site" 
+         target="_blank" rel="nofollow" 
+         onclick="gtag('event', 'affiliate_click', {'affiliate': 'Seedsman'});">
+        Seedsman Seeds
+      </a>
+      <a href="https://ilgm.com/affiliate-program?aff=biobloom&utm_source=biobloom&utm_medium=site" 
+         target="_blank" rel="nofollow" 
+         onclick="gtag('event', 'affiliate_click', {'affiliate': 'ILGM'});">
+        ILGM Seeds
+      </a>
+      <a href="https://www.mars-hydro.com/affiliate-program?ref=biobloom&utm_source=biobloom&utm_medium=site" 
+         target="_blank" rel="nofollow" 
+         onclick="gtag('event', 'affiliate_click', {'affiliate': 'Mars Hydro'});">
+        Mars Hydro LEDs
+      </a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>
+        <a href="/">Home</a> | 
+        <a href="https://discord.gg/PbkEQQB8" target="_blank" onclick="gtag('event', 'footer_click', {'link': 'discord'});">Discord</a> | 
+        <a href="https://x.com/dedalosmith" target="_blank" onclick="gtag('event', 'footer_click', {'link': 'x'});">@dedalosmith</a>
+      </p>
+      <p>&copy; 2025 BioBloom.Club — Made in NL with AI</p>
+    </footer>
+
+  </div>
+
 </body>
 </html>
