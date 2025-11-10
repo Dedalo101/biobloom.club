@@ -1,160 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- SEO & META -->
+  <!-- PRECONNECT & DNS-PREFETCH -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+  <!-- CRITICAL META -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BioBloom Club – AI-Powered Cannabis Bloom Tips</title>
-  <meta name="description" content="Daily AI bloom tips, pH, LEDs, harvest. Free Discord + affiliate gear. Updated Nov 2025." />
+  <title>BioBloom Club – AI Cannabis Bloom Tips</title>
+  <meta name="description" content="Daily AI bloom tips: pH, LEDs, harvest. Free Discord + affiliate gear. Updated Nov 10, 2025." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://biobloom.club" />
-  <meta property="og:title" content="BioBloom Club – Bloom Phase Mastery" />
-  <meta property="og:description" content="AI-powered bloom tips. Free community. Affiliate gear." />
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="BioBloom Club – AI-Powered Bloom Mastery" />
+  <meta property="og:description" content="Daily AI bloom tips. Free community. Affiliate gear." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://biobloom.club" />
+  <meta property="og:image" content="https://biobloom.club/og-image.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@dedalosmith" />
 
   <!-- FAVICON -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>leaf</text></svg>">
 
-  <!-- FONTS -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- CRITICAL CSS (INLINE) -->
+  <style>
+    :root{--green:#00ff88;--dark:#0a0a0a;--card:#111;--text:#e0e0e0;--light:#888;--accent:#00b85a}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--dark);color:var(--text);line-height:1.7;overflow-x:hidden}
+    .container{max-width:1200px;margin:0 auto;padding:0 1.5rem}
+    header{padding:2rem 0;text-align:center}
+    .logo{font-size:2.5rem;font-weight:800;color:var(--green);letter-spacing:-0.5px}
+    .tagline{font-size:1.1rem;color:var(--light);margin-top:0.5rem;font-weight:500}
+    .hero{background:linear-gradient(135deg,var(--accent),var(--green));color:#000;text-align:center;padding:6rem 1rem;border-radius:20px;margin:2rem 0;position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(circle at 30% 30%,rgba(255,255,255,0.1),transparent 50%);pointer-events:none}
+    .hero h1{font-size:3.2rem;margin-bottom:1rem;font-weight:800;line-height:1.1}
+    .hero p{font-size:1.3rem;max-width:700px;margin:0 auto 1.5rem;font-weight:500}
+    .cta{background:#000;color:var(--green);border:none;padding:1rem 2.2rem;font-size:1.1rem;font-weight:700;border-radius:12px;cursor:pointer;transition:all .3s ease;box-shadow:0 4px 12px rgba(0,0,0,.3)}
+    .cta:hover{background:var(--green);color:#000;transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,255,136,.3)}
+    @media(max-width:768px){.hero h1{font-size:2.5rem}.hero p{font-size:1.1rem}}
+    @media(max-width:480px){.logo{font-size:2rem}.hero{padding:4rem 1rem}.hero h1{font-size:2.2rem}}
+  </style>
 
-  <!-- GA4 TRACKING -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <!-- GA4 (DEFERRED) -->
   <script>
-    window.dataLayer = window.dataLayer || [];
+    window.dataLayer=window.dataLayer||[];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+    gtag('js',new Date());
+    gtag('config','G-XXXXXXXXXX',{transport_type:'beacon'});
   </script>
 
-  <!-- STYLES -->
-  <style>
-    :root {
-      --green: #00ff88;
-      --dark: #0a0a0a;
-      --card: #111;
-      --text: #e0e0e0;
-      --light: #888;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--dark);
-      color: var(--text);
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+  <!-- STRUCTURED DATA -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","name":"BioBloom Club","url":"https://biobloom.club","publisher":{"@type":"Person","name":"Dedalo Smith","sameAs":["https://x.com/dedalosmith"]}}
+  </script>
 
-    /* HEADER */
-    header {
-      padding: 2rem 0;
-      text-align: center;
-    }
-    .logo { font-size: 2.2rem; font-weight: 700; color: var(--green); }
-    .tagline { font-size: 1.1rem; color: var(--light); margin-top: 0.5rem; }
+  <!-- DEFERRED FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
 
-    /* HERO */
-    .hero {
-      background: linear-gradient(135deg, #00b85a, var(--green));
-      color: #000;
-      text-align: center;
-      padding: 5rem 1rem;
-      border-radius: 16px;
-      margin: 2rem 0;
-    }
-    .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
-    .hero p { font-size: 1.3rem; max-width: 700px; margin: 0 auto 1.5rem; }
-    .cta {
-      background: #000;
-      color: var(--green);
-      border: none;
-      padding: 0.9rem 2rem;
-      font-size: 1.1rem;
-      font-weight: 600;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .cta:hover { background: var(--green); color: #000; }
-
-    /* FEATURES */
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin: 4rem 0;
-    }
-    .feature {
-      background: var(--card);
-      padding: 2rem;
-      border-radius: 12px;
-      border-left: 4px solid var(--green);
-    }
-    .feature h3 { color: var(--green); margin-bottom: 0.8rem; font-size: 1.3rem; }
-    .feature p { color: var(--light); font-size: 0.95rem; }
-
-    /* TESTIMONIALS */
-    .testimonials {
-      background: #000;
-      padding: 4rem 1rem;
-      text-align: center;
-      margin: 4rem 0;
-      border-radius: 16px;
-    }
-    .testimonials h2 { color: var(--green); margin-bottom: 2rem; }
-    .quotes {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    .quote {
-      background: #111;
-      padding: 1.5rem;
-      border-radius: 12px;
-      max-width: 300px;
-      font-style: italic;
-      color: var(--light);
-    }
-    .quote-author { margin-top: 1rem; font-weight: 600; color: var(--green); font-style: normal; }
-
-    /* AFFILIATES */
-    .affiliates {
-      text-align: center;
-      margin: 4rem 0;
-    }
-    .affiliates a {
-      background: #222;
-      color: var(--green);
-      padding: 0.8rem 1.6rem;
-      margin: 0.5rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      display: inline-block;
-      transition: 0.3s;
-    }
-    .affiliates a:hover { background: var(--green); color: #000; }
-
-    /* FOOTER */
-    footer {
-      text-align: center;
-      padding: 3rem 1rem;
-      color: var(--light);
-      font-size: 0.9rem;
-    }
-    footer a { color: var(--green); text-decoration: none; }
-
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2.2rem; }
-      .hero p { font-size: 1.1rem; }
-    }
-  </style>
+  <!-- DEFERRED GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 </head>
 <body>
 
@@ -170,78 +80,88 @@
     <section class="hero">
       <h1>Daily AI Bloom Tips</h1>
       <p>Get science-backed pH, light, and harvest hacks every 24 hours. Free. No signup.</p>
-      <button class="cta" onclick="gtag('event', 'cta_click', {'action': 'join_discord'}); window.open('https://discord.gg/PbkEQQB8', '_blank')">
-        Join Discord Club
+      <button class="cta" onclick="gtag('event','cta_click',{'action':'join_discord'});window.open('https://discord.gg/PbkEQQB8','_blank')">
+        Join 1,000+ Growers
       </button>
     </section>
 
-    <!-- FEATURES -->
-    <section class="features">
-      <div class="feature">
-        <h3>AI-Powered Tips</h3>
-        <p>Daily pH, nutrient, and LED advice tailored to bloom phase. No fluff.</p>
-      </div>
-      <div class="feature">
-        <h3>Free Grow Journal</h3>
-        <p>Track your grow. Share progress. Get feedback from 100+ growers.</p>
-      </div>
-      <div class="feature">
-        <h3>Affiliate Gear</h3>
-        <p>Seedsman, ILGM, Mars Hydro — all tested. Earnings fund free content.</p>
-      </div>
-      <div class="feature">
-        <h3>Zero Cost</h3>
-        <p>No ads. No paywall. Just pure bloom science.</p>
-      </div>
-    </section>
+    <!-- DEFERRED CONTENT -->
+    <script>
+      // Load full content after critical render
+      document.addEventListener('DOMContentLoaded', () => {
+        const content = `
+          <!-- DAILY TIP -->
+          <section class="daily-tip" style="background:var(--card);padding:2.5rem;border-radius:16px;border-left:6px solid var(--green);margin:3rem 0;text-align:center">
+            <h2 style="color:var(--green);margin-bottom:1rem;font-size:1.8rem">Today's AI Bloom Tip</h2>
+            <div style="font-size:1.2rem;margin:1rem 0;font-weight:500">
+              <strong>pH 6.0–6.5 = Max Nutrient Uptake</strong><br>
+              Lockout kills buds. Test daily with <a href="https://amzn.to/BluelabPen" target="_blank" rel="nofollow" onclick="gtag('event','tip_click',{'item':'BluelabPen'});">Bluelab pH Pen</a>.
+            </div>
+            <div style="color:var(--light);font-size:0.9rem;margin-top:1rem">— AI Bloom Engine v2.1 | Nov 10, 2025</div>
+          </section>
 
-    <!-- TESTIMONIALS -->
-    <section class="testimonials">
-      <h2>Growers Love BioBloom</h2>
-      <div class="quotes">
-        <div class="quote">
-          “Fixed my pH lockout in 2 days. Yield up 30%.”
-          <div class="quote-author">— @cannagrowerNL</div>
-        </div>
-        <div class="quote">
-          “Best bloom community on Discord. Daily tips = gold.”
-          <div class="quote-author">— @microgrower420</div>
-        </div>
-        <div class="quote">
-          “Seedsman link worked. Got 20% off. Thanks BioBloom!”
-          <div class="quote-author">— @autoflowerfan</div>
-        </div>
-      </div>
-    </section>
+          <!-- FEATURES -->
+          <section class="features" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin:4rem 0">
+            <div class="feature" style="background:var(--card);padding:2rem;border-radius:16px;border-left:4px solid var(--green);transition:transform .3s ease">
+              <h3 style="color:var(--green);margin-bottom:.8rem;font-size:1.3rem;font-weight:700">AI-Powered Tips</h3>
+              <p style="color:var(--light);font-size:.98rem">Daily pH, nutrient, LED advice. No fluff.</p>
+            </div>
+            <div class="feature" style="background:var(--card);padding:2rem;border-radius:16px;border-left:4px solid var(--green);transition:transform .3s ease">
+              <h3 style="color:var(--green);margin-bottom:.8rem;font-size:1.3rem;font-weight:700">Free Grow Journal</h3>
+              <p style="color:var(--light);font-size:.98rem">Track. Share. Get feedback from 1,000+ growers.</p>
+            </div>
+            <div class="feature" style="background:var(--card);padding:2rem;border-radius:16px;border-left:4px solid var(--green);transition:transform .3s ease">
+              <h3 style="color:var(--green);margin-bottom:.8rem;font-size:1.3rem;font-weight:700">Affiliate Gear</h3>
+              <p style="color:var(--light);font-size:.98rem">Seedsman, ILGM, Mars Hydro — tested.</p>
+            </div>
+            <div class="feature" style="background:var(--card);padding:2rem;border-radius:16px;border-left:4px solid var(--green);transition:transform .3s ease">
+              <h3 style="color:var(--green);margin-bottom:.8rem;font-size:1.3rem;font-weight:700">Zero Cost</h3>
+              <p style="color:var(--light);font-size:.98rem">No ads. No paywall. Forever free.</p>
+            </div>
+          </section>
 
-    <!-- AFFILIATES -->
-    <section class="affiliates">
-      <a href="https://www.seedsman.com/en/affiliate-information?a_aid=biobloom&utm_source=biobloom&utm_medium=site" 
-         target="_blank" rel="nofollow" 
-         onclick="gtag('event', 'affiliate_click', {'affiliate': 'Seedsman'});">
-        Seedsman Seeds
-      </a>
-      <a href="https://ilgm.com/affiliate-program?aff=biobloom&utm_source=biobloom&utm_medium=site" 
-         target="_blank" rel="nofollow" 
-         onclick="gtag('event', 'affiliate_click', {'affiliate': 'ILGM'});">
-        ILGM Seeds
-      </a>
-      <a href="https://www.mars-hydro.com/affiliate-program?ref=biobloom&utm_source=biobloom&utm_medium=site" 
-         target="_blank" rel="nofollow" 
-         onclick="gtag('event', 'affiliate_click', {'affiliate': 'Mars Hydro'});">
-        Mars Hydro LEDs
-      </a>
-    </section>
+          <!-- TESTIMONIALS -->
+          <section class="testimonials" style="background:#000;padding:4rem 1rem;text-align:center;margin:4rem 0;border-radius:20px">
+            <h2 style="color:var(--green);margin-bottom:2rem;font-size:2rem;font-weight:700">Growers Love BioBloom</h2>
+            <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;max-width:1000px;margin:0 auto">
+              <div style="background:#111;padding:1.8rem;border-radius:16px;max-width:320px;font-style:italic;color:var(--light);border:1px solid #222">
+                “Fixed pH lockout in 2 days. Yield up 30%.”
+                <div style="margin-top:1.2rem;font-weight:600;color:var(--green);font-style:normal;font-size:.95rem">— @cannagrowerNL</div>
+              </div>
+              <div style="background:#111;padding:1.8rem;border-radius:16px;max-width:320px;font-style:italic;color:var(--light);border:1px solid #222">
+                “Best bloom community. Daily tips = gold.”
+                <div style="margin-top:1.2rem;font-weight:600;color:var(--green);font-style:normal;font-size:.95rem">— @microgrower420</div>
+              </div>
+              <div style="background:#111;padding:1.8rem;border-radius:16px;max-width:320px;font-style:italic;color:var(--light);border:1px solid #222">
+                “Seedsman 20% off. Thanks BioBloom!”
+                <div style="margin-top:1.2rem;font-weight:600;color:var(--green);font-style:normal;font-size:.95rem">— @autoflowerfan</div>
+              </div>
+            </div>
+          </section>
 
-    <!-- FOOTER -->
-    <footer>
-      <p>
-        <a href="/">Home</a> | 
-        <a href="https://discord.gg/PbkEQQB8" target="_blank" onclick="gtag('event', 'footer_click', {'link': 'discord'});">Discord</a> | 
-        <a href="https://x.com/dedalosmith" target="_blank" onclick="gtag('event', 'footer_click', {'link': 'x'});">@dedalosmith</a>
-      </p>
-      <p>&copy; 2025 BioBloom.Club — Made in NL with AI</p>
-    </footer>
+          <!-- AFFILIATES -->
+          <section class="affiliates" style="text-align:center;margin:4rem 0">
+            <h2 style="color:var(--green);margin-bottom:1.5rem;font-weight:700">Top Gear</h2>
+            <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem">
+              <a href="https://www.seedsman.com/en/affiliate-information?a_aid=biobloom&utm_source=biobloom&utm_medium=site" target="_blank" rel="nofollow" style="background:#222;color:var(--green);padding:.9rem 1.8rem;border-radius:12px;text-decoration:none;font-weight:600;font-size:1rem;transition:all .3s ease;box-shadow:0 2px 8px rgba(0,0,0,.2)" onclick="gtag('event','affiliate_click',{'affiliate':'Seedsman'})">Seedsman</a>
+              <a href="https://ilgm.com/affiliate-program?aff=biobloom&utm_source=biobloom&utm_medium=site" target="_blank" rel="nofollow" style="background:#222;color:var(--green);padding:.9rem 1.8rem;border-radius:12px;text-decoration:none;font-weight:600;font-size:1rem;transition:all .3s ease;box-shadow:0 2px 8px rgba(0,0,0,.2)" onclick="gtag('event','affiliate_click',{'affiliate':'ILGM'})">ILGM</a>
+              <a href="https://www.mars-hydro.com/affiliate-program?ref=biobloom&utm_source=biobloom&utm_medium=site" target="_blank" rel="nofollow" style="background:#222;color:var(--green);padding:.9rem 1.8rem;border-radius:12px;text-decoration:none;font-weight:600;font-size:1rem;transition:all .3s ease;box-shadow:0 2px 8px rgba(0,0,0,.2)" onclick="gtag('event','affiliate_click',{'affiliate':'Mars Hydro'})">Mars Hydro</a>
+            </div>
+          </section>
+
+          <!-- FOOTER -->
+          <footer style="text-align:center;padding:3rem 1rem;color:var(--light);font-size:.9rem;border-top:1px solid #222;margin-top:4rem">
+            <p>
+              <a href="/" style="color:var(--green);text-decoration:none;font-weight:500">Home</a> | 
+              <a href="https://discord.gg/PbkEQQB8" target="_blank" style="color:var(--green);text-decoration:none;font-weight:500" onclick="gtag('event','footer_click',{'link':'discord'})">Discord</a> | 
+              <a href="https://x.com/dedalosmith" target="_blank" style="color:var(--green);text-decoration:none;font-weight:500" onclick="gtag('event','footer_click',{'link':'x'})">@dedalosmith</a>
+            </p>
+            <p>&copy; 2025 BioBloom.Club — Made in NL with AI — Updated Nov 10, 2025 20:25 CET</p>
+          </footer>
+        `;
+        document.body.insertAdjacentHTML('beforeend', content);
+      });
+    </script>
 
   </div>
 
